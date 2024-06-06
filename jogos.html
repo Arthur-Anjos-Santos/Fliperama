@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <title>Fliperama Retrô</title>
+    <link rel="stylesheet" href="CSS/jogos.css">
+</head>
+<body>
+    <header>
+        <h1>Fliperama Retrô</h1>
+    </header>
+    <main id="mainContainer">
+        <section id="games">
+            <h2>Escolha seu jogo:</h2>
+            <div class="game">
+                <img src="images/snake.jpg" alt="Snake">
+                <h3>Snake</h3>
+                <button onclick="startSnake()">Jogar</button>
+            </div>
+            <div class="game">
+                <img src="images/pong.png" alt="Pong">
+                <h3>Pong</h3>
+                <button onclick="startPong()">Jogar</button>
+            </div>
+            <div class="game">
+                <img src="images/frogger.jpeg" alt="Frogger">
+                <h3>Frogger</h3>
+                <button onclick="startFrogger()">Jogar</button>
+            </div>
+        </section>
+        <section id="gameCanvas" style="display:none;">
+            <canvas id="pong" width="600" height="400" style="display:none;"></canvas>
+            <canvas id="snake" width="600" height="400" style="display:none;"></canvas>
+            <canvas id="frogger" width="400" height="400" style="display:none;"></canvas>
+        </section>
+        
+    </main>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Sobre</h2>
+            <p>Desenvolvido por: </p>
+            <p>Arthur Anjos Santos, </p>
+            <p>Camila Lima de Sousa Delazari Perazzoli, </p>
+            <p>Diego Henrique Teixeira da Silva, </p>
+            <p>Michelle Dias,</p>
+            <p>Este site é um projeto acadêmico de uma coleção de jogos de fliperama.</p>
+        </div>
+    </div>
+
+    <div id="aboutLink" class="about-link" onclick="openModal()">Sobre</div>
+
+    <script src="JavaScript/jogos.js"></script>
+    <script src="JavaScript/snake.js"></script>
+    <script src="JavaScript/pong.js"></script>
+    <script src="JavaScript/frogger.js"></script>
+
+</body>
+</html>
